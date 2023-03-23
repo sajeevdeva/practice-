@@ -1,4 +1,4 @@
-name: practice
+name: singlejob
 on: push
 jobs:
   firstjob:
@@ -9,9 +9,9 @@ jobs:
       - name: install dependencies
         run: npm ci
       - name: install lint
-        run: npm lint 
+        run: npm run lint
       - name: test code
-        run: npm test
+        run: npm run test
       - name: run code
         run: npm run build
       - name: deploy  
