@@ -35,5 +35,5 @@ jobs:
       - name: install lint
         run: npm run lint 
       - name: deploy  
-        run: echo"deploying........."
+        run: echo "deploying........."
     
