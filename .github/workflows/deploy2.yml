@@ -1,0 +1,39 @@
+name: practice
+on: push
+jobs:
+  jobnametest:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: install dependencies
+        run: npm ci
+      - name: install lint
+        run: npm run lint 
+
+  jobnamebuild:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: install dependencies
+        run: npm ci
+      - name: install lint
+        run: npm run lint 
+      - name: test code
+        run: npm run test
+      - name: run code
+        run: npm run build
+
+  jobnamedeploy:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: install dependencies
+        run: npm ci
+      - name: install lint
+        run: npm run lint 
+      - name: deploy  
+        run: echo"deploying.........""
+    
