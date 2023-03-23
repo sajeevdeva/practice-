@@ -1,0 +1,10 @@
+name: output
+on: issues
+jobs:
+  output-details:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: output github 
+        run: echo "${{ toYAML(github) }}"
+      - name: output github event
+        run: echo "${{ toYAML(github.event) }}"
