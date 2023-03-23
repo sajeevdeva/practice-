@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: output github 
-        run: echo "${{ toYAML(github) }}"
+        run: echo "${{ toJSON(github) }}"
       - name: output github event
-        run: echo "${{ toYAML(github.event) }}"
+        run: echo "${{ toJSON(github.event) }}"
