@@ -1,5 +1,8 @@
 name: singlejob
-on: push
+on:
+  pull-requests:
+  types:
+    - opened
 jobs:
   firstjob:
     runs-on: ubuntu-latest
