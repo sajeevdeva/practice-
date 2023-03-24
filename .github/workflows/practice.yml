@@ -1,4 +1,4 @@
-name: singlejob
+name: events
 on:
   pull-requests:
   types:
@@ -6,8 +6,8 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-     - '.github/workflows'
+    path:
+     - '.github/workflows/*'
 jobs:
   firstjob:
     runs-on: ubuntu-latest
