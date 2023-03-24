@@ -3,6 +3,11 @@ on:
   pull-requests:
   types:
     - opened
+  push:
+    branches:
+      - main
+    paths-ignore:
+     - '.github/workflows'
 jobs:
   firstjob:
     runs-on: ubuntu-latest
